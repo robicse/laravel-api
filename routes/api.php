@@ -23,6 +23,7 @@ Route::prefix('version1')->group(function () {
     Route::get('user/list', 'Api\UserController@userList');
     Route::get('user/info/{id}', 'Api\UserController@info')->middleware('auth:api');
     Route::post('user/info/update', 'Api\UserController@updateName')->middleware('auth:api');
+    Route::get('user/information/list', 'Api\UserInformationController@userInformationList');
     Route::post('user/information', 'Api\UserInformationController@store')->middleware('auth:api');
     Route::get('user/information/{id}', 'Api\UserInformationController@information')->middleware('auth:api');
     Route::post('user/information/update/{id}', 'Api\UserInformationController@updateUserInfo');
