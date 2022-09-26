@@ -35,4 +35,9 @@ class UserController extends Controller
             'message' => 'Profile information has been updated successfully'
         ]);
     }
+
+    public function userList()
+    {
+        return new UserCollection(User::all());
+    }
 }
